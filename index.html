@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    
     <title>Train-Scheduler</title>
+
 </head>
+<body>
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-3">Coding Railway Station</h1>
-            <p class="lead">This is my Firebase and MomentsJS project as a developer</p>
+            <h2 class="display-2">This is my Firebase and MomentsJS project as a developer</h2>
         </div>
     </div>
 
@@ -25,6 +27,7 @@
             <tr>
                 <th>Train Name</th>
                 <th>Destination</th>
+                <th>First Train Time</th>
                 <th>Frequency (min)</th>
                 <th>Next Arrival</th>
                 <th>Minutes Away</th>
@@ -32,8 +35,9 @@
             <tr>
                 <td>Heber Creeper</td>
                 <td>Deer Creek</td>
+                <td>01:00</td>
                 <td>30</td>
-                <td>5:30 PM</td>
+                <td>01:30</td>
                 <td>10</td>
             </tr>
         </table>
@@ -43,27 +47,33 @@
         <form>
             <div class="form-group">
                 <label for="trainName">Train Name</label>
-                <input type="text" class="form-control" id="train" placeholder="Name">
+                <input type="text" class="form-control" id="train" placeholder="Train Name">
             </div>
             <div class="form-group">
                 <label for="dstntn">Destination</label>
-                <input type="text" class="form-control" id="train" placeholder="dstntn">
+                <input type="text" class="form-control" id="dstntn" placeholder="Destination">
             </div>
             <div class="form-group">
                 <label for="frstTrnTm">First Train Time (HH:mm - military time)</label>
-                <input type="text" class="form-control" id="train" placeholder="frstTrnTm">
+                <input type="text" class="form-control" id="frstTrnTm" placeholder="First Train Time">
             </div>
             <div class="form-group">
                 <label for="frqncy">Frequency (min)</label>
-                <input type="text" class="form-control" id="train" placeholder="frqncy">
+                <input type="text" class="form-control" id="frqncy" placeholder="Frequency">
             </div>
         
             <button id="submit-button" type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
-<body>
-<script type="text/javascript" src="assets/javascript/jquery-3.3.1.min copy.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/javascript/logic.js"></script>    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- BootstrapJS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- MomentsJS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/javascript/logic.js"></script>    
 </body>
 </html>

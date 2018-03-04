@@ -1,4 +1,14 @@
 .jumbotron {
     background-image: url(../images/tracks1.jpg);
-    color: lightgray;
+    background-repeat: no-repeat;
+    color: #d3d3d3;
+    text-shadow: 2px 2px #3e373e;
+}
+.display-2 {
+    color: #010101;
+    text-shadow: 2px 2px #d3d3d3;
+    position: relative;
+    margin-top: 29px;
+    margin-left: 132px;
+
 }
