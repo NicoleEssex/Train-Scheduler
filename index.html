@@ -27,7 +27,7 @@
             <tr>
                 <th>Train Name</th>
                 <th>Destination</th>
-                <th>First Train Time</th>
+                <th >First Train Time</th>
                 <th>Frequency (min)</th>
                 <th>Next Arrival</th>
                 <th>Minutes Away</th>
@@ -37,8 +37,8 @@
                 <td>Deer Creek</td>
                 <td>01:00</td>
                 <td>30</td>
-                <td>01:30</td>
-                <td>10</td>
+                <td id="nxtRvl">01:30</td>
+                <td id="mnsWy">10</td>
             </tr>
         </table>
     </div>
@@ -54,17 +54,19 @@
                 <input type="text" class="form-control" id="dstntn" placeholder="Destination">
             </div>
             <div class="form-group">
-                <label for="frstTrnTm">First Train Time (HH:mm - military time)</label>
-                <input type="text" class="form-control" id="frstTrnTm" placeholder="First Train Time">
+                <label for="frstTrnTm">First Train Time</label>
+                <input id="frstTrnTm" type="time" class="form-control" placeholder="First Train Time">
+                
             </div>
             <div class="form-group">
-                <label for="frqncy">Frequency (min)</label>
-                <input type="text" class="form-control" id="frqncy" placeholder="Frequency">
+                <label for="frqncy">Frequency</label>
+                <input id="frqncy" type="number" class="form-control" placeholder="Frequency">
             </div>
         
             <button id="submit-button" type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
+    <p id="p">This is a test for time</p>
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <!-- JQuery -->
