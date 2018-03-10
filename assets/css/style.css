@@ -1,5 +1,6 @@
 .jumbotron {
     background-image: url(../images/tracks1.jpg);
+    width: 100%;
     background-repeat: no-repeat;
     color: #d3d3d3;
     text-shadow: 2px 2px #3e373e;

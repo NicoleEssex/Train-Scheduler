@@ -53,8 +53,10 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
     console.log("FB " + sv.dstn);
     console.log("FB " + sv.ftt);
     console.log("FB " + sv.frq);
-    
 
+//variable storing snapshot values needed to be used for MomentsJS calculations
+var firstTrainTime = sv.ftt;
+console.log(sv.ftt);
 
     //create new row in table with variable
     var newRow = $("<tr>");
@@ -78,6 +80,9 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
 
 //TO DO:
 // Use MomentsJS to calculate what time the Next Train Arrives based on the frequency of the train and what it's first time was.
+var difference = (sv.ftt);
+var milDif = moment(difference);
+console.log(milDif);
 
 // Use Moments JS to calculate how many minutes away the Next Train Arrival time is.
 
