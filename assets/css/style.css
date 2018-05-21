@@ -1,4 +1,4 @@
-.jumbotron {
+#trainHead {
     background-image: url(../images/tracks1.jpg);
     width: 100%;
     background-repeat: no-repeat;
@@ -12,4 +12,7 @@
     margin-top: 29px;
     margin-left: 132px;
 
+}
+h4 {
+    text-align: center;
 }
