@@ -19,6 +19,7 @@ var connectionsRef = database.ref("/trains");
 //Listener for submit button.
 $("#addTrainBtn").on("click", function(event){
     event.preventDefault();
+    $("#tableBody").html("");
     //Capture values from user input.
     var trainName = $("#trainNameInput").val().trim();
     var destinationInput = $("#destinationInput").val().trim();
@@ -40,7 +41,7 @@ $("#addTrainBtn").on("click", function(event){
     $("#firstTrainInput").val("");
     $("#frequencyInput").val("");
   
-    connectionsRef.orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
+    connectionsRef.orderByChild("dateAdded").on("child_added", function(snapshot){
         var snapshot = snapshot.val();
         console.log(snapshot);
     
@@ -58,7 +59,8 @@ $("#addTrainBtn").on("click", function(event){
     
 
     //Displaying data to html.
-    $("#trainTable").find('tbody')
+
+    $("#tableBody")
     .append($('<tr>')
         .append($("<td>"+name+"</td><td>"+destination+"</td><td>"+frequency+"</td><td>"+arrival+"</td><td>"+minutesAway+"</td>")));
 });
